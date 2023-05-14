@@ -1,8 +1,8 @@
 import { __ } from "@wordpress/i18n";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Networks from "./Networks";
 import General from "./General";
-import CategoryTagLock from "./CategoryTagLock";
+import CategoryTagLock from "./CategoryTagLock"; // new import
 import "../../scss/admin/style.scss";
 
 function App() {
@@ -33,18 +33,18 @@ function App() {
               </li>
 
               <li
-                className={"categorytaglock" === currentTab ? "active" : ""}
-                onClick={() => setCurrentTab("categorytaglock")}
+                className={"category-tag-lock" === currentTab ? "active" : ""}
+                onClick={() => setCurrentTab("category-tag-lock")}
               >
-                {__("CategoryTagLock", "unlock-protocol")}
+                {__("Category/Tag Lock", "unlock-protocol")} {/* new tab */}
               </li>
             </ul>
           </div>
 
           <div className="right-content">
-            {"categorytaglock" === currentTab ? <CategoryTagLock /> : ""}
-            {"networks" === currentTab ? <Networks /> : ""}
             {"general" === currentTab ? <General /> : ""}
+            {"networks" === currentTab ? <Networks /> : ""}
+            {"category-tag-lock" === currentTab ? <CategoryTagLock /> : ""} {/* new condition */}
           </div>
         </div>
       </div>
