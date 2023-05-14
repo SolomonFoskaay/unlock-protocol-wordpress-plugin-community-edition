@@ -2,7 +2,7 @@ import { __ } from "@wordpress/i18n";
 import { useState } from "react";
 import Networks from "./Networks";
 import General from "./General";
-import CategoryTagLock from "./CategoryTagLock"; // new import
+import CategoryTagLock from "./Category-Tag-Lock"; // new import
 import "../../scss/admin/style.scss";
 
 function App() {
